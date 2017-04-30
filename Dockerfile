@@ -7,7 +7,7 @@ ENV DEBCONF_NONINTERACTIVE_SEEN true
 
 
 RUN apt-get update -y \
-    && apt-get -y --no-install-recommends install openjdk-8-jre-headless wget \
+    && apt-get -y --no-install-recommends install openjdk-8-jre-headless wget ca-certificates sudo unzip lsof \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /opt/selenium && wget --no-check-certificate -O /opt/selenium/SeleniumGridExtras.jar \
